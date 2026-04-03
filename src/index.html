@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XBat — Xbox Battery Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="widget" id="widget">
+    <div class="titlebar" id="titlebar">
+      <div class="titlebar-left">
+        <svg class="title-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="url(#bolt-grad)" stroke="none"/>
+          <defs>
+            <linearGradient id="bolt-grad" x1="3" y1="2" x2="21" y2="22">
+              <stop offset="0%" stop-color="#22c55e"/><stop offset="100%" stop-color="#107C10"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="title-text">XBat</span>
+        <span class="title-badge">LIVE</span>
+      </div>
+      <div class="titlebar-right">
+        <button class="tb-btn" id="btn-history" title="View Session History"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></button>
+        <button class="tb-btn" id="btn-minimize"><svg width="12" height="12"><rect x="1" y="5.5" width="10" height="1.2" rx="0.6" fill="currentColor"/></svg></button>
+        <button class="tb-btn tb-close" id="btn-close"><svg width="12" height="12"><path d="M2.5 2.5l7 7M9.5 2.5l-7 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+      </div>
+    </div>
+    <div class="controller-tabs" id="controller-tabs">
+      <button class="tab active" data-index="0">1</button>
+      <button class="tab" data-index="1">2</button>
+      <button class="tab" data-index="2">3</button>
+      <button class="tab" data-index="3">4</button>
+    </div>
+    <div class="content">
+      <div class="no-controller" id="no-controller">
+        <div class="no-ctrl-icon"><svg width="64" height="64" viewBox="0 0 24 24" fill="none" opacity="0.3"><path d="M6 11h4m4 0h4M12 7v4m0 4v4M7.5 4h9a5.5 5.5 0 015.5 5.5v5a5.5 5.5 0 01-5.5 5.5h-9A5.5 5.5 0 012 14.5v-5A5.5 5.5 0 017.5 4z" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <p class="no-ctrl-title">No Controller Detected</p>
+        <p class="no-ctrl-sub">Connect via Bluetooth or Adapter</p>
+      </div>
+      
+      <div class="history-panel" id="history-panel" style="display: none;">
+        <div class="history-panel-header">
+          <span>Session History</span>
+          <button class="panel-close" id="btn-history-close">Back</button>
+        </div>
+        <div id="session-list" class="session-list">
+          <!-- Session items will be injected here -->
+        </div>
+      </div>
+
+      <div class="controller-view" id="controller-view" style="display: none;">
+        <div class="battery-section">
+          <div class="gauge-container"><canvas id="battery-gauge" width="180" height="180"></canvas><div class="gauge-center"><span class="gauge-percent" id="gauge-percent">100%</span><span class="gauge-label" id="gauge-label">Full</span></div></div>
+          <div class="battery-meta"><div class="meta-chip"><span class="chip-dot" id="chip-dot"></span><span id="battery-type-text">Alkaline</span></div><div class="connection-status"><span class="status-dot pulse"></span><span>Connected</span></div></div>
+        </div>
+        <div class="session-card"><div class="session-header"><span>Current Session</span></div><div class="session-timer" id="session-timer">00:00:00</div></div>
+        <div class="stats-grid"><div class="stat-card"><div class="stat-value" id="stat-today-time">0h 0m</div><div class="stat-label">Today</div></div><div class="stat-card"><div class="stat-value" id="stat-today-sessions">0</div><div class="stat-label">Sessions</div></div><div class="stat-card"><div class="stat-value" id="stat-avg-session">0h 0m</div><div class="stat-label">Avg Length</div></div></div>
+        <div class="history-card"><div class="history-header"><span>Battery History</span><span class="history-sub" id="history-count">0 sessions</span></div><canvas id="history-chart" width="320" height="70"></canvas></div>
+        <div class="label-card"><input type="text" class="label-input" id="battery-label" placeholder="Rename this battery set..." maxlength="30"></div>
+      </div>
+    </div>
+    <div class="footer"><span class="footer-text">Total: <strong id="total-playtime">0h</strong></span><span class="footer-dot">·</span><span class="footer-text"><strong id="total-sessions">0</strong> sessions</span></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

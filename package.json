@@ -1,0 +1,54 @@
+{
+  "name": "xbat",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Premium Xbox Controller Battery Tracker & Session Analytics for Windows",
+  "main": "main.js",
+  "author": "PiyushMishra (PiyushMishra318)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PiyushMishra318/xbat"
+  },
+  "homepage": "https://github.com/PiyushMishra318/xbat#readme",
+  "bugs": {
+    "url": "https://github.com/PiyushMishra318/xbat/issues"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "dist": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.antigravity.xbat",
+    "productName": "XBat",
+    "win": {
+      "target": "portable",
+      "icon": "src/assets/icon.png"
+    },
+    "portable": {
+      "artifactName": "${productName}.exe",
+      "requestExecutionLevel": "user"
+    },
+    "files": [
+      "main.js",
+      "preload.cjs",
+      "lib/**/*",
+      "src/**/*",
+      "package.json"
+    ]
+  },
+  "keywords": [
+    "xbox",
+    "battery",
+    "controller",
+    "widget"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^41.1.1",
+    "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "xinput-ffi": "^4.0.2"
+  }
+}
