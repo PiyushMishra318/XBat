@@ -7,8 +7,10 @@
   <title>XBat</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
-<body>
-  <header class="header"><div class="header__inner">
+<body class="theme-xbat">
+  <div class="bg-animation" aria-hidden="true"></div>
+  <header class="header">
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme"><span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">&#9728;</span><span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">&#9789;</span></button><div class="header__inner">
     <span class="badge">Electron · Windows</span>
     <h1>XBat</h1>
     <p>Minimalist glassmorphism desktop widget for Xbox controller battery life and session analytics — real-time XInput monitoring with tray support.</p>
@@ -19,5 +21,6 @@
 npm start
 npm run dist   # portable EXE</pre></section></main>
   <footer class="site-footer footer"><p>MIT © 2026 · <a href="https://piyushm.dev">piyushm.dev</a> · <a href="https://github.com/PiyushMishra318/XBat" target="_blank" rel="noopener noreferrer">View on GitHub</a></p></footer>
+  <script src="/theme.js"></script>
 </body>
 </html>
