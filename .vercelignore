@@ -1,0 +1,13 @@
+node_modules/
+dist/
+dist/**
+src/
+lib/
+main.js
+preload.cjs
+package-lock.json
+.git/
+.vercel/
+*.exe
+*.blockmap
+builder-*.yaml
