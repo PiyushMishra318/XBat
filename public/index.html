@@ -10,9 +10,9 @@
   <title>XBat</title>
   <link rel="stylesheet" href="/styles.css" />
 </head>
-<body class="theme-xbat portfolio-designed landing-page">
+<body class="theme-xbat portfolio-designed landing-v2 landing-page">
   <div class="bg-animation" aria-hidden="true"></div>
-  <header class="header landing-hero">
+  <header class="header landing-hero landing-hero--split">
         <div class="header__top">
       <a class="header__brand" href="https://piyushm.dev">piyushm.dev</a>
       <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme" title="Toggle theme"><span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">&#9728;</span><span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">&#9789;</span></button>
@@ -23,10 +23,24 @@
     <p>Minimalist glassmorphism desktop widget for Xbox controller battery life and session analytics — real-time XInput monitoring with tray support.</p>
   
       <a class="header__github" href="https://github.com/PiyushMishra318/XBat" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-    </div></header>
-  <main class="page-main main"><section class="card"><h2>Features</h2><div class="feature-grid"><div class="feature-tile"><strong>Real-time battery for wired and wireless controllers</strong><span></span></div><div class="feature-tile"><strong>Bluetooth fallback via PowerShell integration</strong><span></span></div><div class="feature-tile"><strong>Session history and glassmorphism UI</strong><span></span></div></div><div class="actions"><a class="btn" href="https://github.com/PiyushMishra318/XBat">View on GitHub</a></div></section><section class="card"><h2>Run locally</h2><pre>npm install
+    </div><aside class="hero-panel hero-panel--xbat" aria-hidden="true">
+      <span class="hero-panel__label">Preview</span>
+      <div class="hero-panel__content"></div>
+    </aside>
+  </header>
+  <main class="page-main main">
+    <div class="stat-strip"><div class="stat-strip__item"><span class="stat-strip__value">XInput</span><span class="stat-strip__label">Real-time</span></div><div class="stat-strip__item"><span class="stat-strip__value">BT</span><span class="stat-strip__label">PowerShell fallback</span></div><div class="stat-strip__item"><span class="stat-strip__value">Tray</span><span class="stat-strip__label">Always visible</span></div></div>
+    <section class="card"><p class="section-title">Capabilities</p><div class="feature-grid"><div class="feature-tile"><strong>Battery HUD</strong><span>Wired and wireless controller levels.</span></div><div class="feature-tile"><strong>Bluetooth path</strong><span>PowerShell integration when XInput is sparse.</span></div><div class="feature-tile"><strong>Session history</strong><span>Glass UI with analytics over time.</span></div></div></section>
+    <section class="card"><p class="section-title">How it works</p><div class="workflow"><div class="workflow__step"><div><strong>Install</strong><span>npm install in repo root.</span></div></div><div class="workflow__step"><div><strong>Dev</strong><span>npm start for Electron window.</span></div></div><div class="workflow__step"><div><strong>Ship</strong><span>npm run dist for portable EXE.</span></div></div></div></section>
+    
+    <section class="cta-band">
+      <div><strong>Ready to try it?</strong><p>Source and releases live on GitHub — install locally for the full experience.</p></div>
+      <div class="actions"><a class="btn" href="https://github.com/PiyushMishra318/XBat">View on GitHub</a><a class="btn btn--ghost" href="https://github.com/PiyushMishra318/XBat">Source</a></div>
+    </section>
+    <section class="card"><p class="section-title">Quick start</p><pre>npm install
 npm start
-npm run dist   # portable EXE</pre></section></main>
+npm run dist   # portable EXE</pre></section>
+  </main>
   <footer class="site-footer footer"><p>MIT © 2026 · <a href="https://piyushm.dev">piyushm.dev</a> · <a href="https://github.com/PiyushMishra318/XBat" target="_blank" rel="noopener noreferrer">View on GitHub</a></p></footer>
   <script src="/theme.js"></script>
 </body>
