@@ -1,6 +1,10 @@
-# XBat — Premium Xbox Controller Tracker
+# Author's Note (NOT AI GENERATED)
 
-![XBat Icon](src/assets/icon.png)
+> Do you also find it annoying to track your xbox controller battery using the default bluetooth ui on windows.
+> Well you run this and see the changes in battery life for your xbox controller in real time sorta (windows doesnt have drivers to track it very accurately).
+> Any and all contributions are greatly appreciated. CIAO.
+
+# XBat — Premium Xbox Controller Tracker
 
 **XBat** is a minimalist, glassmorphism-style desktop widget for Windows that tracks your Xbox controller's battery life and session performance in real-time. Built with Electron and XInput, it's designed for gamers who want a high-end, unobtrusive way to monitor their gear.
 
