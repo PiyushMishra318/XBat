@@ -1,7 +1,7 @@
 # Author's Note (NOT AI GENERATED)
 
 > Do you also find it annoying to track your xbox controller battery using the default bluetooth ui on windows.
-> Well you run this and see the changes in battery life for your xbox controller in real time sorta (windows doesnt have drivers to track it very accurately).
+> Well you install XBat (get it x-box and battery. I will take whole credit for this cz AI could have probably come up with something better) this and see the changes in battery life for your xbox controller in real time sorta (windows doesnt have drivers to track it very accurately).
 > Any and all contributions are greatly appreciated. CIAO.
 
 # XBat — Premium Xbox Controller Tracker
